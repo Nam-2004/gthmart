@@ -3,22 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Shopee Đồ Gia Dụng GTH Mart</title>
+    <title>Chuyển đến Shopee</title>
+    <meta http-equiv="refresh" content="3;url=https://shopee.vn/do_gia_dung_gth_mart">
     <style>
         body {
             margin: 0;
             padding: 0;
-            overflow: hidden;
-        }
-        iframe {
-            width: 100vw;
             height: 100vh;
-            border: none;
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            color: #333;
+        }
+        .message {
+            text-align: center;
+            font-size: 24px;
         }
     </style>
 </head>
 <body>
-    <iframe src="https://shopee.vn/do_gia_dung_gth_mart" title="Shopee Đồ Gia Dụng GTH Mart"></iframe>
+    <div class="message">Đang chuyển đến trang Shopee...</div>
+    <script>
+        setTimeout(() => {
+            window.location.href = 'https://shopee.vn/do_gia_dung_gth_mart';
+        }, 3000);
+    </script>
 </body>
 </html>
