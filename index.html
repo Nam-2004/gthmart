@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -9,6 +9,37 @@
             font-family: sans-serif;
             margin: 0;
             padding: 0;
+        }
+
+        /* Shopee Logo CSS */
+        .shopee-logo {
+            width: 40px;           /* Kích thước hình tròn chính */
+            height: 40px;
+            background-color: #ee4d2d; /* Màu cam đặc trưng của Shopee */
+            border-radius: 50%;     /* Tạo hình tròn */
+            position: relative;     /* Để định vị các phần tử con */
+        }
+
+        .shopee-logo::before {
+            content: "";            /* Tạo phần tử giả */
+            position: absolute;
+            top: 25%;              /* Định vị cách đỉnh 25% */
+            left: 25%;             /* Định vị cách trái 25% */
+            width: 50%;            /* Chiếm 50% chiều rộng của cha */
+            height: 50%;           /* Chiếm 50% chiều cao của cha */
+            background-color: white; /* Màu trắng */
+            border-radius: 50%;     /* Tạo hình tròn */
+        }
+
+        .shopee-logo::after {
+            content: "";            /* Tạo phần tử giả */
+            position: absolute;
+            top: 35%;              /* Định vị cách đỉnh 35% */
+            left: 35%;             /* Định vị cách trái 35% */
+            width: 30%;            /* Chiếm 30% chiều rộng của cha */
+            height: 30%;           /* Chiếm 30% chiều cao của cha */
+            background-color: #ee4d2d; /* Màu cam */
+            border-radius: 50%;     /* Tạo hình tròn */
         }
 
         /* Header Section */
@@ -28,10 +59,6 @@
 
         .header-center {
             flex-direction: column;
-        }
-
-        .logo img {
-            height: 40px;
         }
 
         .search-container {
@@ -258,7 +285,7 @@
         </div>
         <div class="header-center">
             <div class="logo">
-                <img src="shopee-logo.png" alt="Shopee Logo">
+                <div class="shopee-logo"></div> <!-- Logo Shopee được tạo bằng CSS -->
             </div>
             <div class="search-container">
                 <div class="search-bar">
