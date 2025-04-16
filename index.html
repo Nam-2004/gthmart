@@ -20,15 +20,24 @@
         .message {
             text-align: center;
             font-size: 24px;
+            opacity: 1;
+            transition: opacity 1s ease-in-out;
+        }
+        .message.fade-out {
+            opacity: 0;
         }
     </style>
 </head>
 <body>
-    <div class="message">Đang chuyển đến trang Shopee...</div>
+    <div class="message" id="message">Đang chuyển đến trang Shopee...</div>
     <script>
         setTimeout(() => {
-            window.location.href = 'https://shopee.vn/do_gia_dung_gth_mart';
-        }, 3000);
+            const message = document.getElementById('message');
+            message.classList.add('fade-out');
+            setTimeout(() => {
+                window.location.href = 'https://shopee.vn/do_gia_dung_gth_mart';
+            }, 1000); // Wait for fade-out to complete
+        }, 2000); // Show message for 2 seconds before starting fade
     </script>
 </body>
 </html>
